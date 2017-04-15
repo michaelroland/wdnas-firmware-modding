@@ -212,9 +212,6 @@ if [ ! -z "${BLOCK_DEV}" ] ; then
     echo "Storing image to /uRamdisk on ${BLOCK_DEV} ..."
     dd if="${OUTPUT_FILE}" of="${TEMP_DIR}/uRamdisk"
 
-    echo "Unmounting filesystem ..."
-    umount "${TEMP_DIR}"
-    
     echo "Done."
     echo ""
 fi

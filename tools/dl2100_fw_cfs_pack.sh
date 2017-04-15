@@ -175,14 +175,11 @@ echo ""
 
 if [ ! -z "${BLOCK_DEV}" ] ; then
     echo "Mounting image.cfs block device ${BLOCK_DEV} ..."
-    echo mount -o rw "${BLOCK_DEV}" "${TEMP_DIR}"
+    mount -o rw "${BLOCK_DEV}" "${TEMP_DIR}"
 
     echo "Storing image to /image.cfs on ${BLOCK_DEV} ..."
-    echo dd if="${OUTPUT_FILE}" of="${TEMP_DIR}/image.cfs"
+    dd if="${OUTPUT_FILE}" of="${TEMP_DIR}/image.cfs"
 
-    echo "Unmounting filesystem ..."
-    umount "${TEMP_DIR}"
-    
     echo "Done."
     echo ""
 fi

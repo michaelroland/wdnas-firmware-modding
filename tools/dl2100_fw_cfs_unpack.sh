@@ -212,11 +212,4 @@ LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${SCRIPT_PATH}" unsquashfs -d "${OUTPUT_SQFS
 echo "Done."
 echo ""
 
-if [ ! -z "${BLOCK_DEV}" ] ; then
-    echo "Unmounting filesystem ..."
-    umount "${TEMP_DIR}"
-    echo "Done."
-    echo ""
-fi
-
 cleanup

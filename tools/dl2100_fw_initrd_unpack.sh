@@ -215,11 +215,4 @@ cd "${previous_dir}"
 echo "Done."
 echo ""
 
-if [ ! -z "${BLOCK_DEV}" ] ; then
-    echo "Unmounting filesystem ..."
-    umount "${TEMP_DIR}"
-    echo "Done."
-    echo ""
-fi
-
 cleanup
