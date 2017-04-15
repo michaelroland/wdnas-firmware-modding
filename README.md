@@ -151,6 +151,26 @@ Alternatively, you can directly install the packed SquashFS container to the fla
     ./dl2100_fw_cfs_pack.sh /shares/Public/customized_cfs
 
 
+### Patch Support for Editable Startup Scripts into SquashFS Filesystem
+
+You can patch support for editable (i.e. residing in the configuration partition) startup
+hooks into the SquashFS filesystem with the script
+<samp>[dl2100_patch_startup_cfs.sh](tools/dl2100_patch_startup_cfs.sh)</samp>.
+Use the following command to patch an extracted SquashFS file tree located in
+<samp>/shares/Public/customized_cfs/squashfs-root/</samp>:
+
+    ./dl2100_patch_startup_cfs.sh /shares/Public/customized_cfs/squashfs-root
+
+
+### Patch Support for Editable Startup Scripts into Configuration Partition
+
+You can patch the customizable startup hook scripts into the configuration partition
+with the script <samp>[dl2100_patch_startup_config.sh](tools/dl2100_patch_startup_config.sh)</samp>.
+Use the following command to patch the configuration partition in flash memory:
+
+    ./dl2100_patch_startup_config.sh
+
+
 ## FILE FORMATS
 
 - [Specification of the format of WD firmware <samp>.bin</samp> files](doc/fwimage_format_specification.md)
